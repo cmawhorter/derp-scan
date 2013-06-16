@@ -9,7 +9,7 @@ namespace DerpScan.WiaWrapper.Exceptions
 	public class WiaNoDeviceAvailableException : WiaException
 	{
 		public WiaNoDeviceAvailableException(Exception innerException)
-			: base("No WIA devices available", WiaConstant.WIA_S_NO_DEVICE_AVAILABLE, innerException)
+			: base("No WIA devices available", unchecked ((int)WiaDef.WIA_S_NO_DEVICE_AVAILABLE), innerException)
 		{
 		}
 	}

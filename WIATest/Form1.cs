@@ -18,23 +18,30 @@ namespace WIATest
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				var d = DerpScan.WiaWrapper.WiaDevice.ShowSelectionDialog();
-				if (d != null)
-				{
-					MessageBox.Show("got dev");
-					MessageBox.Show(d.DeviceName);
+            try
+            {
+                var d = DerpScan.WiaWrapper.WiaDevice.ShowSelectionDialog();
+                if (d != null)
+                {
+                    //MessageBox.Show("got dev: " + d.DeviceName);
 
-					pictureBox1.Image = d.Scan();
-				}
-				else
-					MessageBox.Show("no selection");
-			}
-			catch (DerpScan.WiaWrapper.Exceptions.WiaNoDeviceAvailableException ex)
-			{
-				MessageBox.Show("no devices");
-			}
+                    int page = 0;
+                    foreach (var scan in d.Scan()) 
+                    {
+                        scan.Save(@"C:\Users\Cory Mawhorter\Desktop\derp\scan" + page + ".png", System.Drawing.Imaging.ImageFormat.Png);
+                        page++;
+                    }
+                }
+                else
+                    MessageBox.Show("no selection");
+            }
+            catch (DerpScan.WiaWrapper.Exceptions.WiaNoDeviceAvailableException ex)
+            {
+                MessageBox.Show("no devices");
+            }
+            finally
+            {
+            }
 		}
 	}
 }

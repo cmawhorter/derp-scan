@@ -838,30 +838,30 @@ namespace DerpScan.WiaWrapper
         // DEFINE_GUID(WIA_CMD_DELETE_DEVICE_TREE,   0x73815942,0xdbea,0x11d2,0x84,0x16,0x00,0xc0,0x4f,0xa3,0x61,0x45);
         // DEFINE_GUID(WIA_CMD_BUILD_DEVICE_TREE,    0x9cba5ce0,0xdbea,0x11d2,0x84,0x16,0x00,0xc0,0x4f,0xa3,0x61,0x45);
 
-        public const int FACILITY_WIA = 33;
-        public const int BASE_VAL_WIA_ERROR = 0x00000000;
-        public const int BASE_VAL_WIA_SUCCESS = 0x00000000;
+        public const uint FACILITY_WIA = 33;
+        public const uint BASE_VAL_WIA_ERROR = 0x00000000;
+        public const uint BASE_VAL_WIA_SUCCESS = 0x00000000;
 
-        public const int WIA_ERROR_GENERAL_ERROR = -2145320959;
-        public const int WIA_ERROR_PAPER_JAM = -2145320958;
-        public const int WIA_ERROR_PAPER_EMPTY = -2145320957;
-        public const int WIA_ERROR_PAPER_PROBLEM = -2145320956;
-        public const int WIA_ERROR_OFFLINE = -2145320955;
-        public const int WIA_ERROR_BUSY = -2145320954;
-        public const int WIA_ERROR_WARMING_UP = -2145320953;
-        public const int WIA_ERROR_USER_INTERVENTION = -2145320952;
-        public const int WIA_ERROR_ITEM_DELETED = -2145320951;
-        public const int WIA_ERROR_DEVICE_COMMUNICATION = -2145320950;
-        public const int WIA_ERROR_INVALID_COMMAND = -2145320949;
-        public const int WIA_ERROR_INCORRECT_HARDWARE_SETTING = -2145320948;
-        public const int WIA_ERROR_DEVICE_LOCKED = -2145320947;
-        public const int WIA_ERROR_EXCEPTION_IN_DRIVER = -2145320946;
-        public const int WIA_ERROR_INVALID_DRIVER_RESPONSE = -2145320945;
-        public const int WIA_ERROR_COVER_OPEN = -2145320944;
-        public const int WIA_ERROR_LAMP_OFF = -2145320943;
-        public const int WIA_ERROR_DESTINATION = -2145320942;
-        public const int WIA_ERROR_NETWORK_RESERVATION_FAILED = -2145320941;
-        public const int WIA_STATUS_END_OF_MEDIA = 2162689;
+        public const uint WIA_ERROR_GENERAL_ERROR = 0x80210001;
+        public const uint WIA_ERROR_PAPER_JAM = 0x80210002;
+        public const uint WIA_ERROR_PAPER_EMPTY = 0x80210003;
+        public const uint WIA_ERROR_PAPER_PROBLEM = 0x80210004;
+        public const uint WIA_ERROR_OFFLINE = 0x80210005;
+        public const uint WIA_ERROR_BUSY = 0x80210006;
+        public const uint WIA_ERROR_WARMING_UP = 0x80210007;
+        public const uint WIA_ERROR_USER_INTERVENTION = 0x80210008;
+        public const uint WIA_ERROR_ITEM_DELETED = 0x80210009;
+        public const uint WIA_ERROR_DEVICE_COMMUNICATION = 0x8021000A;
+        public const uint WIA_ERROR_INVALID_COMMAND = 0x8021000B;
+        public const uint WIA_ERROR_INCORRECT_HARDWARE_SETTING = 0x8021000C;
+        public const uint WIA_ERROR_DEVICE_LOCKED = 0x8021000D;
+        public const uint WIA_ERROR_EXCEPTION_IN_DRIVER = 0x8021000E;
+        public const uint WIA_ERROR_INVALID_DRIVER_RESPONSE = 0x8021000F;
+        public const uint WIA_ERROR_COVER_OPEN = 0x80210010;
+        public const uint WIA_ERROR_LAMP_OFF = 0x80210011;
+        public const uint WIA_ERROR_DESTINATION = 0x80210012;
+        public const uint WIA_ERROR_NETWORK_RESERVATION_FAILED = 0x80210013;
+        public const uint WIA_STATUS_END_OF_MEDIA = 0x210001;
 
         //
         // Definitions for errors and status codes passed to IWiaDataTransfer::BandedDataCallback as the lReason parameter.
@@ -869,66 +869,66 @@ namespace DerpScan.WiaWrapper
         // an error is meant to replace the SEVERITY_ERROR version listed above.
         //
 
-        public const int WIA_STATUS_WARMING_UP = 2162690;
-        public const int WIA_STATUS_CALIBRATING = 2162691;
-        public const int WIA_STATUS_RESERVING_NETWORK_DEVICE = 2162694;
-        public const int WIA_STATUS_NETWORK_DEVICE_RESERVED = 2162695;
-        public const int WIA_STATUS_CLEAR = 2162696;
-        public const int WIA_STATUS_SKIP_ITEM = 2162697;
-        public const int WIA_STATUS_NOT_HANDLED = 2162698;
+        public const uint WIA_STATUS_WARMING_UP = 0x210002;
+        public const uint WIA_STATUS_CALIBRATING = 0x210003;
+        public const uint WIA_STATUS_RESERVING_NETWORK_DEVICE = 0x210006;
+        public const uint WIA_STATUS_NETWORK_DEVICE_RESERVED = 0x210007;
+        public const uint WIA_STATUS_CLEAR = 0x210008;
+        public const uint WIA_STATUS_SKIP_ITEM = 0x210009;
+        public const uint WIA_STATUS_NOT_HANDLED = 0x21000A; 
 
         //
         // The value is returned by Scansetting.dll when the user chooses to change the scanner in scandialog
         //
 
-        public const int WIA_S_CHANGE_DEVICE = 2162699;
+        public const uint WIA_S_CHANGE_DEVICE = 0x21000B; 
 
         //
         // SelectDeviceDlg and SelectDeviceDlgID status code when there are no devices available
         //
 
-        public const int WIA_S_NO_DEVICE_AVAILABLE = -2145320939;
+        public const uint WIA_S_NO_DEVICE_AVAILABLE = 0x80210015; 
 
         //
         // SelectDeviceDlg and GetImageDlg flag constants
         //
 
-        public const int WIA_SELECT_DEVICE_NODEFAULT = 0x00000001;
+        public const uint WIA_SELECT_DEVICE_NODEFAULT = 0x00000001;
 
         //
         // DeviceDlg and GetImageDlg flags constants
         //
 
-        public const int WIA_DEVICE_DIALOG_SINGLE_IMAGE = 0x00000002;   // Only allow one image to be selected
-        public const int WIA_DEVICE_DIALOG_USE_COMMON_UI = 0x00000004;   // Give preference to the system-provided UI, if available
+        public const uint WIA_DEVICE_DIALOG_SINGLE_IMAGE = 0x00000002;   // Only allow one image to be selected
+        public const uint WIA_DEVICE_DIALOG_USE_COMMON_UI = 0x00000004;   // Give preference to the system-provided UI, if available
 
         //
         // RegisterEventCallbackInterface and RegisterEventCallbackCLSID flag constants
         //
 
-        public const int WIA_REGISTER_EVENT_CALLBACK = 0x00000001;
-        public const int WIA_UNREGISTER_EVENT_CALLBACK = 0x00000002;
-        public const int WIA_SET_DEFAULT_HANDLER = 0x00000004;
+        public const uint WIA_REGISTER_EVENT_CALLBACK = 0x00000001;
+        public const uint WIA_UNREGISTER_EVENT_CALLBACK = 0x00000002;
+        public const uint WIA_SET_DEFAULT_HANDLER = 0x00000004;
 
         //
         // WIA event type constants
         //
 
-        public const int WIA_NOTIFICATION_EVENT = 0x00000001;
-        public const int WIA_ACTION_EVENT = 0x00000002;
+        public const uint WIA_NOTIFICATION_EVENT = 0x00000001;
+        public const uint WIA_ACTION_EVENT = 0x00000002;
 
         //
         // Additional WIA raw format constants
         //
 
-        public const int WIA_LINE_ORDER_TOP_TO_BOTTOM = 0x00000001;
-        public const int WIA_LINE_ORDER_BOTTOM_TO_TOP = 0x00000002;
+        public const uint WIA_LINE_ORDER_TOP_TO_BOTTOM = 0x00000001;
+        public const uint WIA_LINE_ORDER_BOTTOM_TO_TOP = 0x00000002;
 
         //
         // WIA event persistent handler flag constants
         //
 
-        public const int WIA_IS_DEFAULT_HANDLER = 0x00000001;
+        public const uint WIA_IS_DEFAULT_HANDLER = 0x00000001;
 
         //
         // WIA connected and disconnected event description strings
